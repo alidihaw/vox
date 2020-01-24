@@ -47,7 +47,7 @@ export class PartnerComponent implements OnInit{
 
   ngOnInit(){
     this.carouselTile = {
-      grid: {xs: 2, sm: 2, md: 3, lg: 3, all: 0},
+      grid: {xs: 1, sm: 2, md: 3, lg: 3, all: 0},
       slide: 2,
       speed: 300,
       load: 2,
