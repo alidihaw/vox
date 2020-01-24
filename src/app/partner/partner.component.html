@@ -1,0 +1,28 @@
+<div class="standard-padding padding-top-20 padding-bottom-20">
+  <div class="partner">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="title family-heading">
+          {{ state.partner.title }}
+        </div>
+        <div class="desc family-heading">
+          {{ state.partner.description }}
+        </div>
+        <div class="padding-botttom-20">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">{{ state.partner.buttonTitle }}</button>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="carousel-partner">
+          <ngx-carousel [inputs]="carouselTile">
+            <ngx-tile NgxCarouselItem *ngFor="let partner of state.partners">
+              <img [src]="partner.image">
+            </ngx-tile>
+            <button NgxCarouselPrev class='leftRs'>&lt;</button>
+            <button NgxCarouselNext class='rightRs'>&gt;</button>
+          </ngx-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
