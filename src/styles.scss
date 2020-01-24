@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #666699;
+
+body {
+    font-family: 'Nunito' !important;
+}
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": #50c1b7
+);
+// import in the bootstrap SASS file
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: Nunito;
+    src: url(assets/fonts/body-Nunito/Nunito-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: Fjalla;
+    src: url(assets/fonts/heading-Fjalla_One/FjallaOne-Regular.ttf) format("opentype");
+}
+
+.standard-padding {
+    padding: 0px 40px !important;
+}
+
+.padding-top-20 {
+    padding-top: 20px !important;
+}
+
+.family-body {
+    font-family: 'Nunito' !important;
+}
+
+.family-heading {
+    font-family: 'Fjalla' !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+button {
+    min-width: 100px;
+}
+
+a:hover {
+    color: $primary !important;
+}
+
+button.navbar-toggler {
+    min-width: 0 !important;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.content-center {
+    align-content: center !important;
+}
+
+.btn-outline-white  {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-white:hover  {
+    border-color: white;
+    color: white;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px !important;
+}
