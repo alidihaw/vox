@@ -1,0 +1,50 @@
+<div class="standard-padding padding-top-20">
+  <nav class="navbar navbar-expand-lg navbar-white bg-white">
+    <a class="navbar-brand" href="#"><img src="/assets/img/donaki-logo-positive.svg"></a>
+
+    <div class="lang-mobile">En <fa-icon [icon]="state.icon.faAngleRight"></fa-icon></div>
+    <button class="navbar-toggler" type="button" (click)="state.flag.isCollapsed = !state.flag.isCollapsed" 
+    [attr.aria-expanded]="!state.flag.isCollapsed" aria-controls="collapseMenu">
+      <fa-icon [icon]="state.icon.faList" *ngIf="!state.flag.isCollapsed"></fa-icon>
+      <fa-icon [icon]="state.icon.faWindowClose" *ngIf="state.flag.isCollapsed"></fa-icon>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapseMenu" [ngbCollapse]="!state.flag.isCollapsed">
+      <ul class="navbar-nav mr-auto family-body">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item d-inline-block" ngbDropdown>
+          <a class="nav-link pointer" ngbDropdownToggle id="linkOne">
+            Link
+          </a>
+          <div ngbDropdownMenu aria-labelledby="linkOne">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </li>
+        <li class="nav-item d-inline-block" ngbDropdown>
+          <a class="nav-link pointer" ngbDropdownToggle id="linkOne">
+            Link
+          </a>
+          <div ngbDropdownMenu aria-labelledby="linkOne">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Contact Us </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-primary mx-2 mx-xs-0" type="submit">Login</button>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Register</button>
+        <div class="lang">
+          En <fa-icon [icon]="state.icon.faAngleRight"></fa-icon>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
